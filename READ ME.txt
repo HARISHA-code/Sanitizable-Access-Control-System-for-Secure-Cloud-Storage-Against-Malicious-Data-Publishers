@@ -1,0 +1,52 @@
+Sanitizable Access Control System for Secure Cloud Storage Against Malicious Data Publishers
+
+
+This Project have following modules,
+1. Data Publisher(n- number of publisher)
+
+	* Register- Data Publiser have to register first.
+	* Login- after authorized by Authority only Data Publiserr can able to login our account
+	* Upload Fiels- Upload the files to the cloud in encrypted format with file private and trapdoor key by using fuzzy logic for key generation and homomorphic algorithm for encryption & decryption.
+	* Send Request- Send file upload request to Sanitizer.
+	* Manage Files- data owner can view all the files uploaded by them and also he/she can delete the files as our wish.
+	* Logout
+
+2. Receiver(n- number of receiver)
+
+	* Register- Receiver have to register with basic information
+	* Login- after authorized by Authority only Data receicver can able to login our account
+	* Keyword request- Send keyword request to OKGSP for file serach. After enter the keyword correct secret key then only user can search the files.
+	* Search Files- can serach the files by keywords and 'k' value. User can view the file in decrypted format ,sends the request to the OKGSP.
+	* View Request Status- user can view the file request status.(active or non-active)
+	* Downlaod Files- By using the file private & trapdoor key, user can download the files in decrypted format.
+	* Logout.
+
+3. Attribute Authority
+
+	* Login
+	* Authorize Data Publisher- Activate to the Data Publisher request
+	* Authorize Receiver- Activate the Recevier request
+	* Logout
+
+4. Sanitizer
+
+	* Login
+	* View Keyword key request- View and send keyword secret key to the user's registered mail id. 
+	* Send Decryption key- Sends to the trapdoor key & file secret key to the user's registered mail id.
+                  * Permit Files- Permit all the files and transfer the files to cloud server upload request send by the Data Publisher. 
+		-Proxy sever permit the files then only user can get the files in 'search files' modules.
+	* View All Permitted Files- View all the permitted files.
+	* Logout
+
+5. Cloud Server
+
+	* Login
+	* View all registered Data Publisher and Receiver.
+	* View All Permitted Files- view all the files uploaded to the cloud by Data Publisher  and permitted by Sanitizer.
+	* View Transactions- view all transactions of Receiver
+	* Result- Generate the result based on the file request counts.
+	* Throughput Result- calculate the throughput of all the files uploaded to the cloud .
+	* Timedelay Result- calculate the timedelay of all the files uploaded to the cloud..
+	* Logout
+
+	
